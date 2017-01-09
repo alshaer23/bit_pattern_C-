@@ -1,0 +1,50 @@
+# include<iostream>
+using namespace std;
+int main(){
+
+    long int x,z,y,a=0,r=0,rx,rx1,rx2;
+    long int F=0,F1=0;
+    cout<<"Enter Decimal Number: "<<endl;
+    cin>>x;
+    rx=rx1=rx2=x;
+
+    while(x>0){ //DECIMAL TO BINARY
+        z=x%2;
+        x=x/2;
+        r=(r*10)+z;
+        if (r==0)
+            F1++;
+        }
+
+        while(r>0){
+            y=r%10;
+            a=(a*10)+y;
+            r=r/10;
+            }
+
+        for(int i=0; i<F1 ; i++){
+            a=a*10;
+        }
+        cout<<"Binary code of "<<rx<<" = "<<a<<endl;
+
+        long int t=0; // DICIMAL TO OCTAL
+        while(rx>0){
+        z=rx%8;
+        t=(t*10)+z;
+        rx=rx/8;
+        if (t==0)
+            F++;
+        }
+
+        long int a1=0;
+        while(t>0){
+            y=t%10;
+            a1=(a1*10)+y;
+            t=t/10;
+            }
+            for(int i=0 ; i<F ; i++){
+                a1=a1*10;
+            }
+        cout<<"Octal code of "<<rx1<<" = "<<a1<<endl;
+
+}
